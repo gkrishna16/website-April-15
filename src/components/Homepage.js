@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Video from "../assets/video7.mp4";
 import styled from "styled-components";
 import "../App.css";
+import "./Homepage.css";
 
 // Social Media
 import { FaBeer, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
@@ -21,8 +22,12 @@ const Homepage = () => {
       <Hpg>
         <section className={active ? "showcase active" : "showcase"}>
           <header>
-            <h2 className="logo">Travel</h2>
-            <div className="toggle active" onClick={() => setActive(!active)}>
+            <h2 className="logo">Gopal's Website</h2>
+            <div
+              style={{ transform: "scale(1.8)" }}
+              className="toggle active"
+              onClick={() => setActive(!active)}
+            >
               {active ? <AiOutlineClose /> : <AiOutlineMenu />}
             </div>
           </header>
@@ -69,16 +74,16 @@ const Homepage = () => {
         <div className="menu">
           <ul>
             <li>
-              <a>Home</a>
+              <a href="/">Home</a>
             </li>
-            <li>
+            {/* <li>
               <a>News</a>
+            </li> */}
+            <li>
+              <a href="/contact">Contact</a>
             </li>
             <li>
-              <a>Contact</a>
-            </li>
-            <li>
-              <a>About</a>
+              <a href="/projects">Projects</a>
             </li>
           </ul>
         </div>

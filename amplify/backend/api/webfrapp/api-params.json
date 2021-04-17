@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/contact",
+            "lambdaFunction": "wbfrmfnct",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/contact"
+        }
+    ],
+    "resourceName": "webfrapp",
+    "apiName": "webfrapp",
+    "functionArns": [
+        {
+            "lambdaFunction": "wbfrmfnct"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-websform-dev-175419-authRole",
+        "unAuthRoleName": "amplify-websform-dev-175419-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "wbfrmfnct",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "tableName": "websitefrm",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}

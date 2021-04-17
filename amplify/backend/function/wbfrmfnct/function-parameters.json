@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "websitefrm": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
