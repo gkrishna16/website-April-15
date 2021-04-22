@@ -29,7 +29,7 @@ const Homepage = () => {
     show: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.1, ease: "easeInOut", staggerChildren: 0.5 },
+      transition: { duration: 0.25, ease: "easeInOut", staggerChildren: 0.5 },
     },
   };
 
