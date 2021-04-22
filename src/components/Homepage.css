@@ -180,9 +180,9 @@ img {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-a:active {
-  background-color: transparent;
-  /* text-decoration: underline; */
+
+.paragraph {
+  font-size: 5em;
 }
 
 @media (max-width: 991px) {

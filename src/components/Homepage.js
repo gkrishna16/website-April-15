@@ -7,7 +7,13 @@ import "./Homepage.css";
 import { motion } from "framer-motion";
 import { pageAnimation, homeAnimation } from "./animation";
 // Social Media
-import { FaBeer, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+import {
+  FaBeer,
+  FaFacebookF,
+  FaTwitter,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -19,8 +25,12 @@ const Homepage = () => {
   const [active, setActive] = useState(false);
 
   const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
+    hidden: { x: 80, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.1, ease: "easeInOut", staggerChildren: 0.5 },
+    },
   };
 
   const container = {
@@ -53,7 +63,7 @@ const Homepage = () => {
 
             <motion.div className="text">
               <motion.div
-                variants={container}
+                variants={titleAnim}
                 initial="hidden"
                 animate="show"
                 className="title-centre"
@@ -62,28 +72,30 @@ const Homepage = () => {
                 <motion.h3 variants={titleAnim}>MY WEBSITE.</motion.h3>
               </motion.div>
 
-              <p>
-                Dolor dolor excepteur nostrud aliquip eiusmod. Et ea aliquip
+              <p style={{ fontSize: "1.2em" }} className="paragraph">
+                {/* Dolor dolor excepteur nostrud aliquip eiusmod. Et ea aliquip
                 nulla commodo. Lorem laborum ullamco nisi do excepteur
-                consectetur.
+                consectetur. */}
+                I am a full stack developer who loves learning new technologies
+                and using those technologies to build innovative web content.
               </p>
               <a href="#">Explore</a>
             </motion.div>
             <ul className="social">
               <li>
-                <a>
+                <a
+                  style={{ color: "white" }}
+                  href="https://www.instagram.com/gopalksingh45/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {/* <img src={facebook} alt="#" /> */}
-                  <FaFacebookF />
-                </a>
-              </li>
-              <li>
-                <a>
-                  {/* <img src={facebook} alt="#" /> */}
-                  <FaTwitter />
+                  <FaInstagram />
                 </a>
               </li>
               <li>
                 <a
+                  style={{ color: "white" }}
                   href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -93,6 +105,7 @@ const Homepage = () => {
               </li>
               <li>
                 <a
+                  style={{ color: "white" }}
                   href="https://github.com/gkrishna16"
                   rel="noopener noreferrer"
                   target="_blank"
